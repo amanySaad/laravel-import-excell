@@ -1,0 +1,65 @@
+version: "3"
+networks:
+  importexcellappnetwork:
+
+services:
+  importexcellapp_mysql:
+    image: mysql:5.7.22
+    container_name: importexcellapp_localserver
+    # command: mysqld --sql_mode=""
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    environment:
+        MYSQL_DATABASE: main_db
+        MYSQL_USER: root
+        MYSQL_PASSWORD: root
+        MYSQL_ROOT_PASSWORD: root
+        SERVICE_TAGS: dev
+        SERVICE_NAME: mysql
+    volumes:
+      - ./data:/var/lib/mysql
+    networks:
+      - "importexcellappnetwork"
+  importexcellapp_phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: unless-stopped
+    links:
+      - importexcellapp_mysql:mysql
+    environment:
+      MYSQL_USERNAME: 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
+      PMA_HOST: importexcellapp_mysql
+      PMA_USER: root
+      PMA_PASSWORD: root
+      UPLOAD_LIMIT: 3000000000
+    ports:
+      - "${PHP_MYADMIN_PORT:-85}:80"
+    volumes:
+      - /docker/sessions
+    networks:
+      - "importexcellappnetwork"
+  importexcellapp_redis:
+    image: docker.io/bitnami/redis:4.0.14
+    container_name:   importexcellapp_redis_server
+    ports:
+      - "${REDIS_PORT:-6380}:6379"
+    networks:
+      - "importexcellappnetwork"
+
+  importexcellapp_server:
+    build: .
+    container_name: "importexcellapp_server"
+    ports:
+      - "${APACHE_PORT:-81}:80"
+    volumes:
+      - "./application:/var/www/public_html"
+      - "./dist:/var/www/dist"
+      - "~/.dockerProfile:/root"
+    working_dir: "/var/www/public_html"
+    depends_on:
+      - "importexcellapp_mysql"
+      - "importexcellapp_redis"
+    networks:
+      - "importexcellappnetwork"

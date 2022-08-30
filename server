@@ -1,0 +1,27 @@
+#!/bin/bash
+if [ "$1" == "bash" ]; then
+        docker-compose run importexcellapp_server bash
+elif [ "$1" == "dbbash" ]; then
+        docker-compose run importexcellapp_mysql bash
+elif [ "$1" == "env" ]; then
+	cp -u .env.example .env
+elif [ "$1" == "build" ]; then
+	docker-compose up -d --build
+elif [ "$1" == "buildc" ]; then
+	docker-compose build --no-cache
+	docker-compose up -d
+elif [ "$1" == "buildf" ]; then
+	docker-compose build --pull
+	docker-compose up -d
+elif [ "$1" == "close" ]; then
+	docker-compose down
+elif [ "$1" == "all" ] || [ "$1" == "closeall" ]; then
+	docker container stop $(docker container ls -aq)
+	docker container rm $(docker container ls -aq)
+elif [ "$1" == "clear" ]; then
+	docker rm -f importexcellapp_localserver
+	docker rm -f importexcellapp_redis_server
+	docker rm -f importexcellapp_server
+else
+	docker-compose up -d
+fi
