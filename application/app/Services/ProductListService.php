@@ -22,7 +22,10 @@ class ProductListService implements Service
 
     public function handle($request, $data = [])
     {
-        return $this->productRepository->all();
+//       return cache()->remember('list-products', 60,function (){
+            return $this->productRepository->all();
+//        });
+
     }
 
 

@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="997e6ab7-a6bd-4d07-a095-ef9bc0160460" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/application/app/Collections/ProductCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/app/Http/Requests/ProductShowRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/app/Resources/ProductResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/app/Responders/ProductListApiResponder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/app/Responders/ProductShowApiResponder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/app/Services/ProductListService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/app/Services/ProductShowService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/app/Collections/ImportCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/app/Responders/ProductStoreApiResponder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/app/Services/ProductStoreService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/.env" beforeDir="false" afterPath="$PROJECT_DIR$/application/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/app/Services/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/app/Services/Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/app/Services/ProductListService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/app/Services/ProductListService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/auto.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/data/auto.cnf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/data/ib_buffer_pool" afterDir="false" />
@@ -20,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/data/ibtmp1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/data/mysql/innodb_index_stats.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/data/mysql/innodb_table_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,20 +39,29 @@
     <setting file="file://$PROJECT_DIR$/application/.env" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/.htaccess" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Collections/BasicCollection.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/application/app/Collections/ImportCollection.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/application/app/Collections/ProductCollection.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Console/Commands/ImportExcelData.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Enum/HttpStatus.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/application/app/Http/Controllers/ProductsController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Interfaces/ProductRepositoryInterface.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Models/Product.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Providers/ProductServiceProvider.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Repositories/ProductRepository.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Resources/BasicResource.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/application/app/Resources/ProductResource.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/application/app/Responders/ProductListApiResponder.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/application/app/Responders/ProductShowApiResponder.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/application/app/Responders/ProductStoreApiResponder.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Responders/Responder.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Responders/ViewResponder.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/application/app/Services/ProductListService.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/application/app/Services/ProductShowService.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/application/app/Services/ProductStoreService.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/app/Services/Service.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/config/filesystems.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/database/migrations/2022_08_31_063914_create_products_table.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/application/routes/api.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/application/storage/app/articles.csv" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -188,17 +196,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/var/www/html/importApp/application/app/Http",
+    "last_opened_file_path": "/var/www/html/importApp/application/app/Http/Requests",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/application/app/Http" />
-      <recent name="$PROJECT_DIR$/application/app/Services" />
-      <recent name="$PROJECT_DIR$/application/app/Resources" />
+      <recent name="$PROJECT_DIR$/application/app/Http/Requests" />
+      <recent name="$PROJECT_DIR$/application/storage/app" />
       <recent name="$PROJECT_DIR$/application/app/Collections" />
+      <recent name="$PROJECT_DIR$/application/app/Services" />
       <recent name="$PROJECT_DIR$/application/app/Responders" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -219,7 +227,7 @@
       <updated>1661895978137</updated>
       <workItem from="1661895979247" duration="1493000" />
       <workItem from="1661927004330" duration="3965000" />
-      <workItem from="1661960021696" duration="5097000" />
+      <workItem from="1661960021696" duration="10150000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,9 @@ use App\Responders\ProductListApiResponder;
 use App\Responders\ProductShowApiResponder;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductShowRequest;
+use App\Http\Requests\ProductImportRequest;
+use App\Responders\ProductStoreApiResponder;
+use App\Services\ProductStoreService;
 
 class ProductsController
 {
@@ -35,6 +38,18 @@ class ProductsController
     public function show(ProductShowRequest $request, ProductShowService $service, ProductShowApiResponder $responder) :ResourceCollection
     {
         return $responder->setResponse($service->handle($request->validated()))->respond();
+    }
+
+    /**
+     * Upload Files and import to database .
+     * @param ProductImportRequest $request
+     * @param ProductStoreService $service
+     * @param ProductStoreApiResponder $responder
+     * @return ResourceCollection
+     */
+    public function store(ProductImportRequest $request, ProductStoreService $service, ProductStoreApiResponder $responder) : ResourceCollection
+    {
+        return $responder->setResponse($service->handle($request))->respond();
     }
 
 
