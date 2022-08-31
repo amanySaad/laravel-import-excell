@@ -2,7 +2,22 @@
 
 namespace App\Models;
 
-class Product
-{
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
+class Product extends Model
+{
+    use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'name',
+        'part_number',
+        'article_group_id',
+        'prize',
+    ];
 }
