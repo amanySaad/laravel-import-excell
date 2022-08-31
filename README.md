@@ -43,5 +43,11 @@ php artisan import-excel --file_name=YOUR_FILE_NAME
 Required Parameters : product_id
 ```
 
+* upload Excel file and store data in database
+``` sh
+[POST] localhost:{port}/api/products/import
+Required Parameters : file  [type=>file]
+```
+
 > **_NOTE:_**  if using POSTMAN You should add accept => application/json at postman headers
 > To Display validation errors.
