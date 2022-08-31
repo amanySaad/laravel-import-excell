@@ -22,9 +22,9 @@ class ProductListService implements Service
 
     public function handle($request, $data = [])
     {
-//       return cache()->remember('list-products', 60,function (){
+       return cache()->remember(ProductRepository::LIST_CACHE_KEY, ProductRepository::LIST_CACHE_DURATION,function (){
             return $this->productRepository->all();
-//        });
+        });
 
     }
 

@@ -10,6 +10,8 @@ class ProductRepository implements ProductRepositoryInterface
      * @var Model
      */
     protected $model;
+    const LIST_CACHE_KEY = 'list-products';
+    const LIST_CACHE_DURATION = 120;
 
     /**
      * BaseRepository constructor.
