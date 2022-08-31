@@ -31,3 +31,14 @@ After running Above command you will import Data from added file to project
 ``` sh
 php artisan import-excel --file_name=YOUR_FILE_NAME
 ```
+
+## Endpoints ##
+* List all uploaded products
+``` sh
+[GET] localhost:{port}/api/products
+```
+* Show only one Product
+``` sh
+[POST] localhost:{port}/api/products
+Required Parameters : product_id
+```
