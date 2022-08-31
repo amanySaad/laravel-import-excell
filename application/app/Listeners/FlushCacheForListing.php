@@ -5,6 +5,7 @@ namespace App\Listeners;
 use App\Events\ProductsUpdated;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Cache;
 
 class FlushCacheForListing
 {
@@ -15,7 +16,7 @@ class FlushCacheForListing
      */
     public function __construct()
     {
-        //
+
     }
 
     /**
@@ -26,6 +27,8 @@ class FlushCacheForListing
      */
     public function handle(ProductsUpdated $event)
     {
-        //
+        /* Flush Caching*/
+        Cache::forget($event->cache_key);
+
     }
 }

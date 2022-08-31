@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="997e6ab7-a6bd-4d07-a095-ef9bc0160460" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/app/Services/ProductStoreService.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/app/Services/ProductStoreService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/app/Events/ProductsUpdated.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/app/Events/ProductsUpdated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/app/Listeners/FlushCacheForListing.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/app/Listeners/FlushCacheForListing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/data/ibdata1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +219,7 @@
       <updated>1661895978137</updated>
       <workItem from="1661895979247" duration="1493000" />
       <workItem from="1661927004330" duration="3965000" />
-      <workItem from="1661960021696" duration="12217000" />
+      <workItem from="1661960021696" duration="13066000" />
     </task>
     <servers />
   </component>

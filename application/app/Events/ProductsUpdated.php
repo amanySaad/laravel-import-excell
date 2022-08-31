@@ -13,15 +13,17 @@ use Illuminate\Queue\SerializesModels;
 class ProductsUpdated
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
+    public $cache_key;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($cache_key)
     {
-        //
+        $this->cache_key = $cache_key;
+
     }
 
     /**
