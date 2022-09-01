@@ -14,7 +14,10 @@ Simple App to Import Data From Excel Files , Manubilate and Use it.
 ./server
 ./server bash
 ```
-* Now you are inside PHP Container
+* Now you are inside PHP Container run following have vendor
+``` sh
+composer update
+```
 ## Import Data from Exel to DB ##
 
 You can try importing through command line
